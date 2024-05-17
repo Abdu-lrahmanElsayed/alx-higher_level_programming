@@ -7,11 +7,11 @@ def main():
     elif len(args) == 1:
         print("1 argument:")
         for arg in range(len(args)):
-            print("1: {:s}".format(args[arg]))
+            print("1: {:}".format(args[arg]))
     else:
         print("{:d} arguments:".format(len(args)))
         for arg in range(len(args)):
-            print("{:d}: {:s}".format(arg, args[arg]))
+            print("{:d}: {:}".format(arg, args[arg]))
     pass
 
 

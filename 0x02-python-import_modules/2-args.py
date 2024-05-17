@@ -11,7 +11,7 @@ def main():
     else:
         print("{:d} arguments:".format(len(args)))
         for arg in range(len(args)):
-            print("{:d}: {:}".format(arg, args[arg]))
+            print("{:d}: {:}".format(arg + 1, args[arg]))
     pass
 
 

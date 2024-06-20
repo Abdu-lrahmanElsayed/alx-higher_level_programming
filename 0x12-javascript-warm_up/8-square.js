@@ -1,9 +1,10 @@
 #!/usr/bin/node
 const [arg] = process.argv.slice(2);
-if (arg) {
-  for (let i = 0; i < arg; i++) {
+const num = +arg;
+if (num) {
+  for (let i = 0; i < num; i++) {
     let op = '';
-    for (let j = 0; j < arg; j++) {
+    for (let j = 0; j < num; j++) {
       op += 'x';
     }
     console.log(op);

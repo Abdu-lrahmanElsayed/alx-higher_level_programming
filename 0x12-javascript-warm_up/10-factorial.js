@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function factorial(a) {
+function factorial (a) {
   let f = 1;
   for (let i = 2; i <= a; i++) {
     f *= i;

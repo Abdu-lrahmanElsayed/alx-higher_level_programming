@@ -5,7 +5,7 @@ if (num) {
   for (let i = 0; i < num; i++) {
     let op = '';
     for (let j = 0; j < num; j++) {
-      op += 'x';
+      op += 'X';
     }
     console.log(op);
   }

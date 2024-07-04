@@ -6,8 +6,7 @@ def list_division(my_list_1, my_list_2, list_length):
             try:
                 idx1 = my_list_1[i]
                 idx2 = my_list_2[i]
-                if not isinstance(idx1, (int, float)) or
-                not isinstance(idx2, (int, float)):
+                if not isinstance(idx1, (int, float)) or not isinstance(idx2, (int, float)):
                     print("wrong type")
                     new_list.append(0)
                 elif idx2 == 0:

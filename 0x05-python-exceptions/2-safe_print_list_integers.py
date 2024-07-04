@@ -6,8 +6,7 @@ def safe_print_list_integers(my_list=[], x=0):
             if isinstance(my_list[i], int):
                 print("{:d}".format(my_list[i]), end="")
                 my_list_len += 1
-    except IndexError:
-        pass
-    finally:
         print()
         return my_list_len
+    except SyntaxError:
+        pass

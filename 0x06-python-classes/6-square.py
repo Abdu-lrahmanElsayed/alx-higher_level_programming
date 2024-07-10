@@ -15,8 +15,8 @@ class Square:
                 size: Private instance attribute with standard value 0
                 position: private instance attribute of atuple
                 """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -55,7 +55,7 @@ class Square:
                     TypeError: If position
                     is not a tuple of 2 positive integers
                     """
-        if not isinstance(value, tuple):
+        if type(value) != tuple:
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
@@ -73,9 +73,9 @@ class Square:
         """public method to print a square of # in stdout"""
         if self.__size == 0:
             print()
-        else:
-            [print() for i in range(0, self.__position[1])]
-            for i in range(0, self.__size):
-                [print(" ", end="") for j in range(0, self.__position[0])]
-                [print("#", end="") for k in range(0, self.__size)]
-                print()
+
+        [print() for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            print()

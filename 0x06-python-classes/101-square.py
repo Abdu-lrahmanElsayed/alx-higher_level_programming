@@ -71,8 +71,8 @@ class Square:
             return '\n'
         else:
             result = ""
-            for i in range(self.position[1]):
-                result += '\n'
-            for j in range(self.__size):
-                result += " " * self.__position[0] + ("#" * self.__size) + '\n'
+            for i in range(self.__size):
+                result += " " * self.__position[0] + ("#" * self.__size)
+                if i != self.__size - 1:
+                    result += '\n'
             return result

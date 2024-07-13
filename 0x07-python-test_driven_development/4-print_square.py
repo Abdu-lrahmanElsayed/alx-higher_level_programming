@@ -8,15 +8,12 @@ def print_square(size):
         raise TypeError('size must be an integer')
     elif size < 0:
         raise ValueError('size must be >= 0')
-    if size == 0:
+    i = 0
+    while i < size:
+        for j in range(size):
+            print("#", end="")
         print()
-    else:
-        i = 0
-        while i < size:
-            for j in range(size):
-                print("#", end="")
-            print()
-            i += 1
+        i += 1
 
 
 if __name__ == "__main__":

@@ -1,0 +1,43 @@
+The ''0-add_integer'' module
+============================
+
+Using ''add_integer''
+---------------------
+
+Import ''add_integer'' from the ''0-add_integer'' module.
+from 0-add_integer import add_integer
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it to test some case:
+	
+	>>> add_integer(2)
+	100
+
+	>>> add_integer(-1)
+	97
+
+	>>> add_integer(5, 5)
+	10
+
+	>>> add_integer(-5, 4)
+	-1
+
+	>>> add_integer(10, -5)
+	5
+
+	>>> add_integer(1.2, 2)
+	3
+
+	>>> add_integer(2, 1.2)
+	3
+	
+	>>> add_integer("A", 5)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+                ...
+        TypeError: b must be an integer

@@ -17,11 +17,13 @@ def add_integer(a, b=98):
     if isinstance(a, float):
         if int(a) is False:
             raise TypeError('a must be an integer')
-        a = int(a)
+        else:
+            a = int(a)
     if isinstance(b, float):
         if int(b) is False:
             raise TypeError('b must be an integer')
-        b = int(b)
+        else:
+            b = int(b)
     addition = a + b
     return addition
 

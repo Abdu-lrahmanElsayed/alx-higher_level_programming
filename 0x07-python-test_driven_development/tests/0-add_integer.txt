@@ -54,4 +54,4 @@ Now use it to test some case:
 	>>> add_integer(flaot('nan'), 5)
         Traceback (most recent call last):
                 ...
-        TypeError: cannot convert float NaN to integer
+        TypeError: a must be an integer

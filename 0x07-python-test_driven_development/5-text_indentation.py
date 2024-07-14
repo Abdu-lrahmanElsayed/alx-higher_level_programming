@@ -15,9 +15,9 @@ def text_indentation(text):
             i += 1
             while i < len(text) and text[i] == " ":
                 i += 1
-                continue
+            continue
         i += 1
-    print(txt)
+    print(txt, end="")
 
 
 if __name__ == "__main__":

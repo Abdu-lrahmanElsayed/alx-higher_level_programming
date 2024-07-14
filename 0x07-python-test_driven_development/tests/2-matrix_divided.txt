@@ -35,3 +35,14 @@ Now trying some case:
 
 	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
         [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+	>>> matrix_divided(None, 2)
+        Traceback (most recent call last):
+                ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided()
+        Traceback (most recent call last):
+ 		File "./2-main.py", line 29, in <module>
+    			print(matrix_divided())
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

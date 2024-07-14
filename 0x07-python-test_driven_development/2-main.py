@@ -25,3 +25,6 @@ try:
     print(matrix_divided(matrix, "a"))
 except Exception as e:
     print(e)
+
+print(matrix_divided())
+print(matrix)

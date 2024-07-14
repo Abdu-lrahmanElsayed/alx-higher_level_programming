@@ -41,3 +41,12 @@ Now use it to test some case:
 	Traceback (most recent call last):
                 ...
         TypeError: b must be an integer
+
+	>>> add_integer(float(5), 5)
+	10
+
+	>>> add_integer(5, float(5))
+        10
+
+	>>> add_integer(float(5), float(5))
+        10

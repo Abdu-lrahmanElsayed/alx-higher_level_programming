@@ -42,11 +42,16 @@ Now use it to test some case:
                 ...
         TypeError: b must be an integer
 
-	>>> add_integer(float(5), 5)
-	10
+	>>> add_integer(999999999.0, 1)
+	1000000000
 
 	>>> add_integer(5, float(5))
         10
 
 	>>> add_integer(float(5), float(5))
         10
+
+	>>> add_integer(flaot('nan'), 5)
+        Traceback (most recent call last):
+                ...
+        TypeError: cannot convert float NaN to integer

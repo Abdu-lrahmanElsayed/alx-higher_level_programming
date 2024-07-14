@@ -26,5 +26,14 @@ try:
 except Exception as e:
     print(e)
 
+try:
+    matrix = [
+        [1, "2", 3],
+        [4, 5, 6]
+    ]
+    print(matrix_divided(matrix, "a"))
+except Exception as e:
+    print(e)
+
 print(matrix_divided())
 print(matrix)

@@ -6,17 +6,18 @@ def text_indentation(text):
     """The function to print and check every thing is ok"""
     if not isinstance(text, str):
         raise TypeError('text must be a string')
-    chars = ".?:"
-    lines = []
     txt = ""
-    for c in text:
-        txt += c
-        if c in chars:
-            lines.append(txt.strip())
-            txt = ""
-    for line in lines:
-        print(line)
-        print("")
+    i = 0
+    while i < len(text):
+        txt += text[i]
+        if text[i] in ".?:":
+            txt += "\n\n"
+            i += 1
+            while i < len(text) and text[i] == " ":
+                i += 1
+                continue
+        i += 1
+    print(txt)
 
 
 if __name__ == "__main__":

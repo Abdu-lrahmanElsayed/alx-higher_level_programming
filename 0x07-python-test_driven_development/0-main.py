@@ -13,4 +13,5 @@ try:
     print(add_integer(None))
 except Exception as e:
     print(e)
-print(add_integer(float('nan'), 5))
+
+print(add_integer(float('inf'), 5))

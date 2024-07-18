@@ -27,3 +27,61 @@ Tests:
         Traceback (most recent call last):
                 ...
         ValueError: distance must be greater than 0
+
+	>>> bg = BaseGeometry()
+        >>> bg.area()
+        Traceback (most recent call last):
+                ...
+        Exception: area() is not implemented
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age")
+	Traceback (most recent call last):
+		File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        		exec(compile(example.source, filename, "single",
+		File "<doctest 7-base_geometry.txt[10]>", line 1, in <module>
+        		bg.integer_validator("age")
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator()
+        Traceback (most recent call last):
+		File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        		exec(compile(example.source, filename, "single",
+		File "<doctest 7-base_geometry.txt[12]>", line 1, in <module>
+        		bg.integer_validator()
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", 1)
+
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", (4,))
+        Traceback (most recent call last):
+                ...
+        TypeError: age must be an integer
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", [3])
+        Traceback (most recent call last):
+                ...
+        TypeError: age must be an integer
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", True)
+        Traceback (most recent call last):
+                ...
+        TypeError: age must be an integer
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", {3, 4})
+        Traceback (most recent call last):
+                ...
+        TypeError: age must be an integer
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", None)
+        Traceback (most recent call last):
+                ...
+        TypeError: age must be an integer

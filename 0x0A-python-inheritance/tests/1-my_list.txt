@@ -1,12 +1,12 @@
 The ''1-my_list'' module
 ========================
 
-Using ''my_list''
+Using ''MyList''
 -----------------
 
-iImport ''my_list'' from the ''1-my_list'' module.
-
-	>>> My_list = __import__('1-my_list').My_list
+Import ''MyList'' from the ''1-my_list'' module.
+i
+	>>> MyList = __import__('1-my_list').MyList
 
 tests:
 
@@ -14,7 +14,19 @@ tests:
 	>>> ml.print_sorted()
 	[1, 2, 3, 4, 5]
 
-	>>> my_list = MyList(["a"])
+	>>> ml = MyList([-1, 4, 2, 3, 5])
+        >>> ml.print_sorted()
+        [-1, 2, 3, 4, 5]
+
+	>>> ml = MyList()
+	>>> ml.append(5)
+	>>> ml.append(3)
+	>>> ml.append(4)
+        >>> ml.print_sorted()
+        [3, 4, 5]
+
+	>>> ml = MyList(["a", 1])
+	>>> ml.print_sorted()
 	Traceback (most recent call last):
 		...
-	TypeError: The index must be integer 
+	TypeError: The index must be integer

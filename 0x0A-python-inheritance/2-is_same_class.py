@@ -4,6 +4,7 @@
 
 def is_same_class(obj, a_class):
     """The function
+
         args:
             obj: is the thing i will check
             a_class: the type"""

@@ -12,6 +12,7 @@ class MyList(list):
                 raise TypeError('The index must be integer')
         print(sorted(self))
 
+
 if __name__ == "__main__":
     import doctest
     doctest.testmethod("tests/1-my_list.txt")

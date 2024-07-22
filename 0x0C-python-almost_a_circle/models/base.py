@@ -39,3 +39,12 @@ class Base:
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding="UTF8") as f:
             f.write(json_txt)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """a static method that:
+        returns the list of the JSON string representation json_string"""
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)

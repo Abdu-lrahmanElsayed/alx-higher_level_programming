@@ -48,3 +48,19 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """a class method that:
+        returns an instance with all attributes already set
+        **dictionary can be thought of as a double pointer to a dictionary"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square(1, 1)
+        else:
+            new = None
+        new.update(**dictionary)
+        return new

@@ -2,6 +2,7 @@
 """The Base class modul"""
 import json
 import os
+import csv
 
 
 class Base:
@@ -75,3 +76,53 @@ class Base:
             return []
         with open(filename, 'r', encoding="UTF8") as f:
             return [cls.create(**n) for n in cls.from_json_string(f.read())]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """a class method to serializes in CSV"""
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, 'w') as f:
+            csv_txt = csv.writer(f)
+            if cls.__name__ == "Rectangle":
+                for obj in list_objs:
+                    csv_txt.writerow([
+                        obj.id,
+                        obj.width,
+                        obj.height,
+                        obj.x,
+                        obj.y
+                        ])
+            elif cls.__name__ == "Square":
+                for obj in list_objs:
+                    csv_txt.writerow([
+                        obj.id,
+                        obj.size,
+                        obj.x,
+                        obj.y
+                        ])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """a class method to deserializes in CSV"""
+        filename = "{}.csv".format(cls.__name__)
+        list_objs = []
+        with open(filename, 'r') as f:
+            txt = csv.reader(f)
+            for line in txt:
+                if cls.__name__ == "Rectangle":
+                    obj = cls(
+                            int(line[0]),
+                            int(line[1]),
+                            int(line[2]),
+                            int(line[3]),
+                            int(line[4])
+                            )
+                elif cls.__name__ == "Square":
+                    obj = cls(
+                            int(line[0]),
+                            int(line[1]),
+                            int(line[2]),
+                            int(line[3])
+                            )
+                list_objs.append(obj)
+                return list_objs

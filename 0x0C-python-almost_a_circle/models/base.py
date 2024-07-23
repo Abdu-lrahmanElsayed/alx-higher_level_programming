@@ -110,7 +110,7 @@ class Base:
             txt = csv.reader(f)
             for line in txt:
                 if cls.__name__ == "Rectangle":
-                    obj = cls(
+                    line = cls(
                             int(line[0]),
                             int(line[1]),
                             int(line[2]),
@@ -118,11 +118,11 @@ class Base:
                             int(line[4])
                             )
                 elif cls.__name__ == "Square":
-                    obj = cls(
+                    line = cls(
                             int(line[0]),
                             int(line[1]),
                             int(line[2]),
                             int(line[3])
                             )
-                list_objs.append(obj)
+                list_objs.append(line)
                 return list_objs

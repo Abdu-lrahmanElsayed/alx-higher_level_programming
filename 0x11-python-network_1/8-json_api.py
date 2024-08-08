@@ -10,11 +10,11 @@ if __name__ == '__main__':
     import sys
     import requests
 
-    r = requests.get('http://0.0.0.0:5000/search_user')
     if len(sys.argv) > 1:
         q = sys.argv[1]
     else:
         q = ''
+    r = requests.get('http://0.0.0.0:5000/search_user', data={'q': q})
 
     try:
         result = r.josn()

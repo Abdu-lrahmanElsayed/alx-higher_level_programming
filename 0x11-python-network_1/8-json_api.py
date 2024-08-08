@@ -11,13 +11,13 @@ if __name__ == '__main__':
     import requests
 
     if len(sys.argv) > 1:
-        q = sys.argv[1]
+        q_data = sys.argv[1]
     else:
-        q = ''
-    r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
+        q_data = ''
+    r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q_data})
 
     try:
-        result = r.josn()
+        result = r.json()
         if result:
             print("[{}] {}".format(result.get('id'), result.get('name')))
         else:
